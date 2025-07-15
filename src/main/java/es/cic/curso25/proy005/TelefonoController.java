@@ -3,6 +3,7 @@ package es.cic.curso25.proy005;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
                              // buscará aqui
 public class TelefonoController {
 
+    @Autowired
+    private TelefonoService telefonoService;
     private int contador = 0;
+
+    // El autowired lo que hace es permitir a Spring crear los objetos y conectarlos, por ejemplo decirle que cree una instancia
+    // de TelefonoService
 
     // C R U D
 
@@ -35,7 +41,8 @@ public class TelefonoController {
 
     @PostMapping
     public long create(@RequestBody Telefono telefonoCrear) {
-        return ++contador;
+        long id = telefonoService.create(telefonoCrear);
+        return id;
         /*
          * ES IMPORTANTE HACERLO ASÍ y no como contador++ porque NO queremos que el
          * primer ID sea 0
@@ -46,7 +53,7 @@ public class TelefonoController {
 
     @GetMapping()
     public List<Telefono> get() {
-        // contador++;
+       
 
         Telefono telefono1 = new Telefono();
         telefono1.setId(1);

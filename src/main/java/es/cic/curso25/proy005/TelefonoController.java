@@ -23,12 +23,12 @@ public class TelefonoController {
      Si están las variables por fuera y dos personas por ejemplo en la aplicación del banco entran, se cambiarían los datos
      Y una persona podría ver la información de la otra
      */
-    @GetMapping()
-    public List<Telefono> get() {
+    @GetMapping("/{id}")
+    public List<Telefono> get(@PathVariable long id) {
         contador++;
         List<Telefono> resultado = new ArrayList<>();
         Telefono telefono1 = new Telefono();
-        telefono1.setId(2);
+        telefono1.setId(id);
         telefono1.setNumero("555555556");
         telefono1.setTipoContrato(1);
         telefono1.setTitular("Juan");

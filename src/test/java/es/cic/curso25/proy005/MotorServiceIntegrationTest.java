@@ -22,7 +22,7 @@ public class MotorServiceIntegrationTest {
         // Creamos un motor entero. El id técnicamente lo crearia la BBDD automaticamente, asi que lo generamos con la aplicacion
         long idAsignado = motorService.create(motorACrear);
 
-        assertTrue(idAsignado > 0, "");
+        assertTrue(idAsignado > 0, "El id no debe ser no positivo");
 
         
     }

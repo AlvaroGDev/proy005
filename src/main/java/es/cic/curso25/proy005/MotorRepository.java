@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MotorRepository {
 
+    
+
     private Map<Long, Motor> motores = new HashMap<>();
 
     public long create(Motor motor) {

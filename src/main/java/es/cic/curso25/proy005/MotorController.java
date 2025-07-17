@@ -14,6 +14,11 @@ public class MotorController {
 
     @PostMapping
     public long create (Motor motor){
+       try{
+
+       } catch(RuntimeException re) {
+
+       }
         if(motor.getId() != null){
             throw new RuntimeException("Al crear no me puedes pasar id");
         } //Si vamos a crear uno, no debemos pasarle el ID, porque lo genera él mismo

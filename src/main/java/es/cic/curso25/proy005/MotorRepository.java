@@ -48,4 +48,9 @@ public class MotorRepository {
         //Esa forma de mostrarlo ayuda mucho a la legibilidad del código
     }
 
+    public Boolean borrarMotor(long id){
+
+       return motores.remove(id) != null;
+    } //Esto devuelve el motor, si existe, será distinto de null y devolvería true, si no existe, será igual que null y devolvería false
+
 }

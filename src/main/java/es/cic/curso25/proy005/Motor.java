@@ -1,7 +1,16 @@
 package es.cic.curso25.proy005;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity 
 public class Motor {
 
+    @Id //Cuidado, hay dos opciones: uno de Jakarta y otro de Spring. SIEMPRE el de Jakarta
+    @GeneratedValue(strategy = GenerationType.AUTO) 
+    // Este va autogenerando, idealmente usariamos UUID (UniversalUnitID) para que sea menos evidente (autoincrementado...)
     private Long id; 
     /*Esto sería un objeto de tipo Long, no una variable primitiva de tipo Long
     A la hora de crear un registro, debería ser null, ya que aún no existe en la base de datos

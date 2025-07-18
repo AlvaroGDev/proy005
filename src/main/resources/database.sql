@@ -9,3 +9,8 @@
         marca varchar(255),
         primary key (id)
     )
+
+    /*
+    Es importante pensar siempre a que campos le podemos/debemos poner como índice, ya que si hay muchos registros
+    puede desembocar en tiempos muy largos o caidas
+    */

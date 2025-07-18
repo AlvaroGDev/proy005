@@ -1,9 +1,12 @@
-package es.cic.curso25.proy005;
+package es.cic.curso25.proy005.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import es.cic.curso25.proy005.model.Motor;
+import es.cic.curso25.proy005.service.MotorService;
 
 @RestController
 @RequestMapping("/motor")

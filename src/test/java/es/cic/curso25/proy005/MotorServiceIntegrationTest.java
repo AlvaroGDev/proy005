@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import es.cic.curso25.proy005.model.Motor;
+import es.cic.curso25.proy005.service.MotorService;
+
 @SpringBootTest
 public class MotorServiceIntegrationTest {
 

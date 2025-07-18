@@ -1,4 +1,4 @@
-package es.cic.curso25.proy005;
+package es.cic.curso25.proy005.repository;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.springframework.stereotype.Repository;
+
+import es.cic.curso25.proy005.model.Motor;
 
 @Repository
 public class MotorRepository {
